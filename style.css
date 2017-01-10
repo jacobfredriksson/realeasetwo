@@ -212,6 +212,38 @@ body {
 }
 /* End responsive phones */
 
+/* Countdown jquery */
+.aside-container .deadline .countdown-row {
+  display: block;
+  text-align: center;
+}
+
+.countdown-section {
+  display: block;
+}
+
+.countdown-section:nth-child(3), .countdown-section:nth-child(4) {
+  display: none;
+}
+
+.aside-container .deadline .countdown-amount {
+  font-size: 1.5em;
+  line height: 10px;
+}
+.aside-container .deadline .countdown-period {
+  display: inline-block;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.countdown-period:before {
+  content: "\00a0";
+}
+
+
+/*end countdown jquery*/
+
 /*!! Plugin Share buttons !!*/
 .addthis_inline_share_toolbox_t0le {
   margin: 7px 1px 1px 5px;
