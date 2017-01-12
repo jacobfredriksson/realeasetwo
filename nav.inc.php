@@ -3,7 +3,7 @@
     <li><a href="index.php?page=index">Hem</a></li>
     <li><a href="index.php?page=cv">Mitt CV</a></li>
     <li><a href="index.php?page=personligtbrev">Personligt brev</a></li>
-    <li><a href="index.php?page=login.php"> Admin </a></li>
+    <li><a href="index.php?page=login"> Admin </a></li>
 </ul>
 
 
@@ -33,6 +33,8 @@
     }
 
     include($page);
+  } else {
+    include("startsida.php");
   }
 
  ?>

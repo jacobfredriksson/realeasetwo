@@ -1,8 +1,5 @@
 <?php session_start(); ?>
-<!DOCTYPE html>
-<html>
-<body>
-  <h1>Logga in-get-ing</h1>
+  <h1>Logga in</h1>
 
   <form action="" method="post">
     <label for="username">Användarnamn:</label>
@@ -29,15 +26,15 @@ if (isset ($_POST['username'], $_POST['password'])){
 
   if(mysqli_num_rows($result) > 0){
     $_SESSION['admin'] = TRUE;
-    header('Location: login.php');
+    header('Location: http://jacobfredriksson.se');
     exit();
   } else {
-    echo "<h1>Wrong username and/or password.</h1>";
+    echo "<h1>Fel användarnamn eller lösenord.</h1>";
   }
 }
-
-
 ?>
 
-</body>
-</html>
+<footer class="mainFooter">
+  <!-- this is where the plugin take place -->
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->  <div class="addthis_inline_share_toolbox_t0le"></div>
+</footer>
