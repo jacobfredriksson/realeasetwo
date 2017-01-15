@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <header class="mainHeader">
   <img src="bilder/tjeckien.jpeg" alt="Utsikt över katedral 2016">
   <img src="bilder/goldengate.jpg" alt="Utsikt över goldengate 2015">
@@ -12,11 +12,16 @@
           <h1> Jacob Fredriksson <br> Front End Developer </h1>
         </header>
 
-          <p>Välkommen till min första publicerade hemsida! Jag har nyligen påbörjat en utbildning som ska leda till att jag blir <em> Front end developer </em>. Detta är mitt första projekt som jag kommer att arbeta med fram tills i början av sommaren. Det kommer ske fyra releaser varav detta är den första. Nästa sker den 13 Januari 2017.
-
-          <p> I denna utbildning kommer jag lära mig att bygga upp kompletta hemsidor. Tekniker jag påbörjat att lära mig är HTML, CCS, JavaScript, jQuery och PHP. </p>
-
-          <p> För att få veta mer om mig får ni gärna besöka mina andra sidor :-) <p>
+          <p class="admin" id="welcome-text">
+            <?php
+              include('config.php');
+              $query = 'SELECT text FROM textcontent WHERE id = "welcome-text"';
+              $result = mysqli_query($db, $query);
+              $row = $result->fetch_row();
+              $text = (string)$row[0];
+              echo $text;
+            ?>
+          <p>
 
       </article>
     </div>
@@ -37,8 +42,3 @@
       <p class ="deadline" id="degreeBegins"></p>
     </article>
   </aside>
-
-  <footer class="mainFooter">
-    <!-- this is where the plugin take place -->
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->  <div class="addthis_inline_share_toolbox_t0le"></div>
-  </footer>

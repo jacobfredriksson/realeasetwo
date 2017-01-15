@@ -3,9 +3,8 @@
     <li><a href="index.php?page=index">Hem</a></li>
     <li><a href="index.php?page=cv">Mitt CV</a></li>
     <li><a href="index.php?page=personligtbrev">Personligt brev</a></li>
-    <li><a href="index.php?page=login"> Admin </a></li>
+    <li><a href="index.php?page=message.php">Kontakta mig</a></li>
 </ul>
-
 
 <?php
   if(isset($_GET['page']) && $_GET['page']!=""){
@@ -23,7 +22,7 @@
         $page = "personligtbrev.php";
         break;
 
-      case 'login':
+      case 'admin':
         $page = "login.php";
         break;
 
@@ -37,4 +36,16 @@
     include("startsida.php");
   }
 
+include ("footer.inc.php");
+ ?>
+
+<?php
+  include("config.php");
+  if ($_SESSION['admin']) {
+    echo '<div class="container">
+            <div class="row">
+                <button name="save" id="save">Spara</button>
+            </div>
+          </div>';
+        }
  ?>

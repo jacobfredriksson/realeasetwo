@@ -1,6 +1,7 @@
-<?php session_start(); ?>
-  <h1>Logga in</h1>
 
+<?php session_start(); ?>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <h1>Logga in</h1>
   <form action="" method="post">
     <label for="username">Användarnamn:</label>
     <input type="text" name="username" />
@@ -18,9 +19,9 @@ include 'config.php';
 
 if (isset ($_POST['username'], $_POST['password'])){
 
-  $username = $_POST['user'];
+  $username = $_POST['username'];
   $password = $_POST['password'];
-  $query = "SELECT user, password FROM admin WHERE user = '".$username."' AND password = '".$password."'";
+  $query = "SELECT username, password FROM Users WHERE username = '".$username."' AND password = '".$password."'";
 
   $result = mysqli_query($db, $query);
 
@@ -33,8 +34,3 @@ if (isset ($_POST['username'], $_POST['password'])){
   }
 }
 ?>
-
-<footer class="mainFooter">
-  <!-- this is where the plugin take place -->
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->  <div class="addthis_inline_share_toolbox_t0le"></div>
-</footer>

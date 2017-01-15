@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
   <header class="mainHeader">
     <img src="bilder/prag.jpg" alt="En Profilbild">
   </header>
@@ -9,7 +9,7 @@
           <h1 class="header-cv"> Mitt CV </h1>
         </header>
         <footer>
-        <p class="info-cv">
+        <p class="info-cv admin" id="resume-text">
           <b> Namn:</b> Jacob Fredriksson<br>
           <b> Födelsedatum:</b> 24 September 1989<br>
           <b> Adress:</b> Kungsholmsgatan 42, 11227 Stockholm<br>
@@ -23,10 +23,10 @@
           <button id="toggleEducation" class="toggleButton"><em>Visa mer...</em></button>
            <div id="education" class="toggleExperience">
              <h3> KYH: </h3>
-             <p> Påbörjad utbildning <em>Front end developer</em> vid KYH i Stockholm <br>
+             <p class="admin" id="kyh-text"> Påbörjad utbildning <em>Front end developer</em> vid KYH i Stockholm <br>
              start Augusti 2016 pågår till Maj 2018.</p>
              <h3> IT-G Södertörn: </h3>
-             <p> Treårig gymnasieutbildning på IT-gymnasiet vid Södertörn
+             <p class="admin" id="itg-text"> Treårig gymnasieutbildning på IT-gymnasiet vid Södertörn
              2005 - 2008 </p><hr>
            </div>
 
@@ -35,22 +35,18 @@
           <button id="toggleInternship" class="toggleButton"><em>Visa mer...</em></button>
             <div id="internship" class="toggleExperience">
              <h4>Jag söker praktik plats!</h4>
-             <p> Under våren 2018 söker jag praktikplats inom <em> front end development</em>, hör gärna av er om ni finner mig intressant!</p> <hr>
+             <p class="admin" id="internship-text"> Under våren 2018 söker jag praktikplats inom <em> front end development</em>, hör gärna av er om ni finner mig intressant!</p> <hr>
            </div>
            <h1> Arbetsplatser: </h1>
            <button id="toggleWorkExperience" class="toggleButton"><em>Visa mer...</em></button>
               <div id="workExperience" class="toggleExperience">
                 <h3>Marinshopen:</h3>
-                <p>På marinshopen har jag jobbat sedan jag gick ut ur gymnasiet med start 2008.<br> Jag började arbeta på lagret där jag snabbt fick ansvaret över företagets leveranser. Ansvaret växte mer med tiden då jag ansvara över hela logistiken under semestrar frånvaro etc.<br>
+                <p class="admin" id="marinshopen-text">På marinshopen har jag jobbat sedan jag gick ut ur gymnasiet med start 2008.<br> Jag började arbeta på lagret där jag snabbt fick ansvaret över företagets leveranser. Ansvaret växte mer med tiden då jag ansvara över hela logistiken under semestrar frånvaro etc.<br>
                 De senaste åren har jag arbetat i butiken som säljare för reservdelar och tillbehör till båtar. Även där stort ansvar under semestrar och frånvaro.</p>
                 <b>Körkort:</b> <em>B</em><hr>
            </div>
       </article>
     </div>
 
-    <footer class="mainFooter">
-      <!-- this is where the plugin take place -->
-      <!-- Go to www.addthis.com/dashboard to customize your tools -->  <div class="addthis_inline_share_toolbox_t0le"></div>
-    </footer>
 
     <script src="cv.js"> </script>

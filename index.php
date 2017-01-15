@@ -19,12 +19,15 @@
     ?>
   </nav>
 
-
 <script src="index.js"></script>
 
-<!-- Share this page plugin -->
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-581359d51303aee4"></script>
+
+<?php
+  if (isset($_SESSION['admin'])) {
+    echo '<script src="changetext.js" type="text/javascript"></script>';
+  }
+?>
+
 </body>
 
 </html>
