@@ -3,7 +3,7 @@
     <li><a href="index.php?page=index">Hem</a></li>
     <li><a href="index.php?page=cv">Mitt CV</a></li>
     <li><a href="index.php?page=personligtbrev">Personligt brev</a></li>
-    <li><a href="index.php?page=message.php">Kontakta mig</a></li>
+    <li><a href="index.php?page=message">Kontakta mig</a></li>
 </ul>
 
 <?php
@@ -20,6 +20,10 @@
 
       case 'personligtbrev':
         $page = "personligtbrev.php";
+        break;
+
+      case 'message':
+        $page = "message.php";
         break;
 
       case 'admin':
