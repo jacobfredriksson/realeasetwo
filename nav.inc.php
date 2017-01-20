@@ -4,6 +4,7 @@
     <li><a href="index.php?page=cv">Mitt CV</a></li>
     <li><a href="index.php?page=personligtbrev">Personligt brev</a></li>
     <li><a href="index.php?page=message">Kontakta mig</a></li>
+    <l1><a href="index.php?page=portfolio"> Portfolio</a></li>
 </ul>
 
 <?php
@@ -24,6 +25,10 @@
 
       case 'message':
         $page = "message.php";
+        break;
+
+      case 'portfolio':
+        $page = "portfolio.php";
         break;
 
       case 'admin':

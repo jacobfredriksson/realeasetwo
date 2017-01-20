@@ -19,8 +19,13 @@ if ($db->connect_error) {
   die('misslyckades: ' . $db->connect_error);
 }
 
+$message = mysqli_real_escape_string($db, $_POST['message']);
+$fullName = mysqli_real_escape_string($db, $_POST['fullName']);
+$phone = mysqli_real_escape_string($db, $_POST['phone']);
+$email = mysqli_real_escape_string($db, $_POST['email']);
+
 $sql = "INSERT INTO messages (message, fullname, phone, email)
-        VALUES ('$_POST[message]', '$_POST[fullName]', '$_POST[phone]', '$_POST[email]')";
+        VALUES ('$message', '$fullName', '$phone', '$email')";
 
 if ($db->query($sql) === TRUE) {
 

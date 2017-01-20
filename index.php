@@ -20,6 +20,7 @@
   </nav>
 
 <script src="index.js"></script>
+<script src="easteregg.js"></script>
 
 
 <?php
