@@ -259,6 +259,43 @@ body {
 /*end countdown jquery*/
 
 /*!! Plugin Share buttons !!*/
-.addthis_inline_share_toolbox_t0le {
+.addthis_inline_share_toolbox_t0le, .email-picture{
   margin: 7px 1px 1px 5px;
+}
+
+.at-share-btn-elements {
+  width: 50%;
+
+}
+
+.email-picture {
+  width: 10%;
+}
+
+
+/*Hangman!! */
+
+.the-word {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.the-word div {
+  float: left;
+  margin: 100px 10px 10px 0px;
+  font-weight: bold;
+}
+
+.letter-holder {
+  width: 30px;
+  height: auto
+}
+
+.letter {
+  visibility: hidden;
+  width: 500px;
+}
+
+.letter- {
+
 }

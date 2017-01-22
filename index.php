@@ -28,7 +28,6 @@
     echo '<script src="changetext.js" type="text/javascript"></script>';
   }
 ?>
-
 </body>
 
 </html>
