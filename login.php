@@ -1,6 +1,5 @@
 
 <?php session_start(); ?>
-  <link href="style.css" rel="stylesheet" type="text/css" />
   <h1>Logga in</h1>
   <form action="" method="post">
     <label for="username">Användarnamn:</label>

@@ -13,19 +13,24 @@
 
 <body>
 
-  <nav class="topNav">
+  
     <?php
-        include_once ('nav.inc.php');
+        include_once ('nav.php');
     ?>
-  </nav>
 
-<script src="index.js"></script>
-<script src="easteregg.js"></script>
+  <div id="message-box" class="message-box">
+       <div>
+            <?php include ('message.php'); ?>
+       </div>
+  </div>
 
+
+<script src="Javascript/index.js"></script>
+<script src="Javascript/easteregg.js"></script>
 
 <?php
   if (isset($_SESSION['admin'])) {
-    echo '<script src="changetext.js" type="text/javascript"></script>';
+    echo '<script src="Javascript/changetext.js" type="text/javascript"></script>';
   }
 ?>
 </body>
