@@ -264,13 +264,8 @@ body {
 
 /*!! Plugin Share buttons !!*/
 .addthis_inline_share_toolbox_t0le ,.email-picture{
-  margin: 7px 1px 1px 5px;
+  margin: 7px 1px 1px 32%;
   position: absolute;
-}
-
-.footerImg {
-  width: 100%;
-  height: 20%;
 }
 
 .email-picture {
@@ -290,7 +285,7 @@ body {
 
 .the-word {
   width: 100%;
-  margin: 0px 0px 0px 570px;
+  margin: 0 0 0 50%;
   text-decoration: underline;
 }
 
@@ -300,7 +295,7 @@ body {
   font-weight: bold;
 }
 
-.letter-holder {
+.letterHolder {
   border-bottom: 2px solid black;
   width: 40px;
   height: auto
@@ -318,6 +313,20 @@ body {
 
 .life-text {
   margin-left: 10px;
+}
+
+.lost {
+  color: red;
+}
+
+.win-text {
+  color: green;
+  display: none;
+}
+
+.lost-text {
+  color: red;
+  display: none;
 }
 
 /* Message */

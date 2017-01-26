@@ -2,7 +2,11 @@
 var wordList = [
   "Dungeon",
   "Grampah",
-  "carrots"
+  "carrots",
+  "katt",
+  "ki",
+  "mat",
+  "as",
 ];
 
 var theWord;
@@ -21,7 +25,7 @@ function start() {
   // Loops throw all the letters in our randomized word and creates a new div per letter and a new div for "?"
   for (var i = 0; i < theWord.length; i++) {
     $('.the-word').append(
-                          '<div class="letter-holder">' +
+                          '<div class="letterHolder">' +
                           '<div class="letter letter-' +
                           theWord[i] + '">' +
                           theWord[i] +
@@ -42,25 +46,21 @@ function guess(character) {
   //Check if the characters exists
   var exists = theWord.indexOf(character) >= 0;
   //console.log(character,theWord,exists);
-
-
   if(!exists) {
     //makes the lives to be one less if the character doesn't exist
     tries--;
-    console.log(tries)
     //check what to do if u win or lose
     if(tries < 1) {
-      alert("you lost!");
-      return window.location.href = ('http://jacobfredriksson.se');
+      tries="";
+      $('.letter').css('visibility', 'visible').addClass('lost');
+      $('.lost-text').css('display', 'block');
     }
   } else {
-    $('.letter-' + character).css('visibility', 'visible')
-
-
-  if ( $('.letter-:visible').not($('.letter-:visible')).hide()); {
-    alert("hej");
-  }
-     }
+    $('.letter-' + character).css('visibility', 'visible').addClass('loltest')
+  }     if ($('.loltest').length == theWord.length)  {
+           $('.loltest').css('color', 'green');
+          $('.win-text').css('display', 'block');
+         }
 
 
 }
@@ -71,5 +71,3 @@ $(document).keyup(function() {
 });
 
 start();
-
-// jag ska göra alla characters som är true till att bli ordet i theword för att sedan se om dem överänsstämmer, om dem gör det så alerta ut en box som säger grattis

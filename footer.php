@@ -2,7 +2,7 @@
 <footer class="mainFooter">
   <!-- this is where the plugin take place -->
   <!-- Go to www.addthis.com/dashboard to customize your tools -->  <div class="addthis_inline_share_toolbox_t0le">
-  <a class="footerImg at-share-btn-elements" id="message" href="#" ><img class="email-picture" src="bilder/email.png" /></a>
+  <a id="message" href="#" ><img class="email-picture" src="bilder/email.png" /></a>
   </div>
 
   <!-- Share this page plugin -->
