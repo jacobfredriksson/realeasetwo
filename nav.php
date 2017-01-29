@@ -7,7 +7,7 @@
     <li><a href="?page=index">Hem</a></li>
     <li><a href="?page=resume">Mitt CV</a></li>
     <li><a href="?page=aboutme">Personligt brev</a></li>
-    <l1><a href="?page=portfolio"> Portfolio</a></li>
+    <li><a href="?page=portfolio"> Portfolio</a></li>
     <?php if ($_SESSION['admin']):
       echo "<li style='float:right;'><a href='#' name='save' id='save'>
        Spara</a></li>

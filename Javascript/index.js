@@ -1,12 +1,12 @@
 //Nedräknare jquery countdown
 $(document).ready(function() {
-  $("#internshipBegins").countdown({
+  $('#internshipBegins').countdown({
     until: $.countdown.UTCDate(
     +1, 2018, 0, 15, 0, 0, 0, 0)
   });
 });
 $(document).ready(function() {
-  $("#degreeBegins").countdown({
+  $('#degreeBegins').countdown({
     until: $.countdown.UTCDate(
     +1, 2018, 4, 31, 0, 0, 0, 0)
   });
