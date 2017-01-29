@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -12,27 +13,23 @@
 </head>
 
 <body>
-
-  
-    <?php
-        include_once ('nav.php');
-    ?>
-
-  <div id="message-box" class="message-box">
-       <div>
-            <?php include ('message.php'); ?>
-       </div>
-  </div>
-
+  <?php
+    include('config.php');
+    include_once ('nav.php');
+    include ('message.php');
+  ?>
 
 <script src="Javascript/index.js"></script>
 <script src="Javascript/easteregg.js"></script>
 
 <?php
   if (isset($_SESSION['admin'])) {
-    echo '<script src="Javascript/changetext.js" type="text/javascript"></script>';
+      echo '<script src="Javascript/changetext.js" type="text/javascript"></script>';
+  }
+  $now = time();
+  if ($now > $_SESSION['expire']) {
+      session_destroy();
   }
 ?>
 </body>
-
 </html>

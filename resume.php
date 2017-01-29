@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 
     <div class="container-cv">
       <article class="mainContent">
@@ -17,30 +16,58 @@
         </footer>
 
           <h1> Utbildningar: </h1>
-          <button id="toggleEducation" class="toggleButton"><em>Visa mer...</em></button>
-           <div id="education" class="toggleExperience">
+          <button class="toggleButton"><em>Visa mer...</em></button>
+           <div class="toggleExperience">
              <h3> KYH: </h3>
-             <p class="admin" id="kyh-text"> Påbörjad utbildning <em>Front end developer</em> vid KYH i Stockholm <br>
-             start Augusti 2016 pågår till Maj 2018.</p>
+             <p class="admin" id="kyh-text">
+               <?php
+                $query = 'SELECT text FROM textcontent WHERE id = "kyh-text"';
+                $result = mysqli_query($db, $query);
+                $row = $result->fetch_row();
+                $text = (string)$row[0];
+                echo $text;
+               ?>
+
              <h3> IT-G Södertörn: </h3>
-             <p class="admin" id="itg-text"> Treårig gymnasieutbildning på IT-gymnasiet vid Södertörn
-             2005 - 2008 </p><hr>
+             <p class="admin" id="itg-text">
+               <?php
+                $query = 'SELECT text FROM textcontent WHERE id = "itg-text"';
+                $result = mysqli_query($db, $query);
+                $row = $result->fetch_row();
+                $text = (string)$row[0];
+                echo $text;
+               ?>
+             </p><hr>
            </div>
 
 
           <h1> Praktikplats: </h1>
-          <button id="toggleInternship" class="toggleButton"><em>Visa mer...</em></button>
-            <div id="internship" class="toggleExperience">
+          <button class="toggleButton"><em>Visa mer...</em></button>
+            <div class="toggleExperience">
              <h4>Jag söker praktik plats!</h4>
-             <p class="admin" id="internship-text"> Under våren 2018 söker jag praktikplats inom <em> front end development</em>, hör gärna av er om ni finner mig intressant!</p> <hr>
+             <p class="admin" id="internship-text">
+               <?php
+                $query = 'SELECT text FROM textcontent WHERE id = "internship-text"';
+                $result = mysqli_query($db, $query);
+                $row = $result->fetch_row();
+                $text = (string)$row[0];
+                echo $text;
+               ?>
+             </p> <hr>
            </div>
            <h1> Arbetsplatser: </h1>
-           <button id="toggleWorkExperience" class="toggleButton"><em>Visa mer...</em></button>
-              <div id="workExperience" class="toggleExperience">
+           <button class="toggleButton"><em>Visa mer...</em></button>
+              <div class="toggleExperience">
                 <h3>Marinshopen:</h3>
-                <p class="admin" id="marinshopen-text">På marinshopen har jag jobbat sedan jag gick ut ur gymnasiet med start 2008.<br> Jag började arbeta på lagret där jag snabbt fick ansvaret över företagets leveranser. Ansvaret växte mer med tiden då jag ansvara över hela logistiken under semestrar frånvaro etc.<br>
-                De senaste åren har jag arbetat i butiken som säljare för reservdelar och tillbehör till båtar. Även där stort ansvar under semestrar och frånvaro.</p>
-                <b>Körkort:</b> <em>B</em><hr>
+                <p class="admin" id="marinshopen-text">
+                  <?php
+                   $query = 'SELECT text FROM textcontent WHERE id = "marinshopen-text"';
+                   $result = mysqli_query($db, $query);
+                   $row = $result->fetch_row();
+                   $text = (string)$row[0];
+                   echo $text;
+                  ?>
+                </p>
            </div>
       </article>
     </div>

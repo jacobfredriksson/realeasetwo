@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 
   <div class="container">
     <div class="content">
@@ -6,10 +5,8 @@
         <header>
           <h1> Jacob Fredriksson <br> Front End Developer </h1>
         </header>
-
           <div class="admin" id="welcome-text">
             <?php
-              include('config.php');
               $query = 'SELECT text FROM textcontent WHERE id = "welcome-text"';
               $result = mysqli_query($db, $query);
               $row = $result->fetch_row();
@@ -17,7 +14,6 @@
               echo $text;
             ?>
           </div>
-
       </article>
     </div>
   </div>
@@ -38,8 +34,9 @@
     </article>
   </aside>
 
-  <aside class="aside-container aside-video" style="float:right;">
+  <aside class="aside-container aside-video">
     <article>
-      <iframe class="iframe" allowfullscreen src="https://www.youtube.com/embed/watch?v=IkcIPq3gxPg&list=PL89VIS_SCOd3RZ_tlL97S4hCzNzrYq7yf&index=7"> </iframe>
+      <iframe class="iframe" allowfullscreen src="https://www.youtube.com/embed/SmUjzUAhWLA">
+      </iframe>
     </article>
   </aside>

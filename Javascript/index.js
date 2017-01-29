@@ -13,14 +13,12 @@ $(document).ready(function() {
 });
 
 
-/* trigger message-box*/
+//trigger message-box
 $(document).ready(function() {
   $('#message').click(function() {
   $('#message-box').css('visibility', 'visible')
   });
-});
-
-$(document).ready(function() {
+  //close message box
   $('#close-message-box').click(function() {
   $('#message-box').css('visibility', 'hidden')
   });
