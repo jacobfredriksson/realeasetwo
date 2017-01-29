@@ -74,7 +74,7 @@ start();
     var length = tries-length;
   $('#life-left').text(length);
   });
-  //restarts the page if u want to play a new game
+  //updates the page if u want to play a new game
   $('#new-game').click(function(){
     window.location.href = ('?page=hangman');
   });
