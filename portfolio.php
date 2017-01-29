@@ -3,13 +3,29 @@
   <aside class="aside-container">
     <article>
       <h2> Individuellt Projekt </h2>
-      <p> <a href="http://jacobfredriksson.se">jacobfredriksson.se</a> Detta är mitt första projekt som kommer att pågå framm tills sommaren 2017, Just nu arbetar jag på release två då vi använder mycket php och sql </p>
+      <div class="admin" id="proj-one-text">
+        <?php
+          $query = 'SELECT text FROM textcontent WHERE id = "proj-one-text"';
+          $result = mysqli_query($db, $query);
+          $row = $result->fetch_row();
+          $text = (string)$row[0];
+          echo $text;
+        ?>
+      </div>
     </article>
   </aside>
 
   <aside class="aside-container">
     <article>
       <h2> Grupp projekt </h2>
-      <p> <a href="http://dengladageten.se"> Dengladageten.se</a> Detta är mitt första avslutade projekt som pågick mellan 1 oktober 2016 till 23 december 2016.</p>
+      <div class="admin" id="proj-two-text">
+        <?php
+          $query = 'SELECT text FROM textcontent WHERE id = "proj-two-text"';
+          $result = mysqli_query($db, $query);
+          $row = $result->fetch_row();
+          $text = (string)$row[0];
+          echo $text;
+        ?>
+      </div>
     </article>
   </aside>
