@@ -1,6 +1,6 @@
 <div id="message-box" class="message-box">
   <div>
-    <form action="" method="post" class="message-form">
+    <form action="" method="post" class="message-form" accept-charset="UTF-8">
       <label > Namn: </label>
         <input placeholder="För - Efternamn" name="fullName" />
       <label > Telefonnummer: </label>
@@ -37,11 +37,11 @@
             echo "Något gick fel! Försök igen!";
           }
           $to = "jacobfredriksson@live.se";
-          $from = $_POST['email'];
-          $fullname = $_POST['fullName'];
-          $phone = $_POST['phone'];
-          $message = $fullname. "\n\n" .$phone . "\n\n" . " skrev följande:" . "\n\n" . $_POST['message'];
-          $headers = "From:" . $from;
+          $from = $clean['email'];
+          $fullname = $clean['fullName'];
+          $phone = $clean['phone'];
+          $message = $fullname. "\n\n" .$phone . "\n\n" . " skrev:" . "\n\n" . $clean['message'];
+          $headers = "av:" . $from;
           mail($to,$subject,$message,$headers);
         }
         mysqli_close($db);

@@ -6,13 +6,11 @@
   	<label for="password">Lösenord:</label>
   	<input type="password" name="password" />
 
-    <input type="submit" value="Logga in" />
+    <input type="submit" value="Logga in" class="toggleButton" />
   </form>
 
 
 <?php
-
-include ('config.php');
 
 if (isset ($_POST['username'], $_POST['password'])){
 

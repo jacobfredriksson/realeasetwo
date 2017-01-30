@@ -170,10 +170,10 @@ display: inline;
 /* Special for the video */
 @media only screen and (min-width: 800px) and (max-width: 1500px) {
   .aside-video {
-    width: 63%;
+    width: 62%;
     height: 400px;
-    float: left;
-    margin:0 ;
+    float: right;
+    margin: 0;
   }
 
   .iframe {
